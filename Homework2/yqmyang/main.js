@@ -3,12 +3,12 @@ let globalData;
 
 // Load data, render initially, and bind resize event
 d3.csv("data/ds_salaries.csv", d => ({
-  year:      +d.work_year,
-  exp:        d.experience_level,
-  salary:    +d.salary_in_usd,
-  remote:    +d.remote_ratio,
-  size:       +{"S":1,"M":2,"L":3}[d.company_size],
-  sizeLabel:  d.company_size
+  year: +d.work_year,
+  exp: d.experience_level,
+  salary: +d.salary_in_usd,
+  remote: +d.remote_ratio,
+  size: +{"S":1,"M":2,"L":3}[d.company_size],
+  sizeLabel: d.company_size
 }))
 .then(data => {
   globalData = data;
@@ -23,7 +23,7 @@ function render() {
   // Clear all existing content
   svg.selectAll("*").remove();
   // Get current window dimensions
-  const width  = window.innerWidth;
+  const width = window.innerWidth;
   const height = window.innerHeight;
 
   // Layout parameters for the three visualizations
