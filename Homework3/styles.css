@@ -1,0 +1,21 @@
+html, body {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    font-family: system-ui, sans-serif;
+  }
+  
+  svg { width: 100%; height: 100%; display: block; }
+  
+  .axis-label,
+  .title,
+  .legend text { font-size: 0.9vw; fill: #111; }
+  
+  .brush .selection { fill: rgba(70,130,180,0.25); stroke: steelblue; }
+  
+  button.resetBtn{
+    position: absolute; top: 8px; left: 12px;
+    border: none; padding: 6px 10px;
+    background:#eee; cursor:pointer; font-size: 0.8rem;
+  }
+  
